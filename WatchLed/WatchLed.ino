@@ -3,12 +3,14 @@
 
 #define DELAY 100
 
+// Arduino's port to Watchguard leds board
+
 #define CLK1 A0
 #define CLK2 A1
 #define CLK3 A2
 #define CLK4 A3
 #define CLK5 A4
-#define OE A5
+#define OE A5 // could be connect to ground
 
 #define D1 2
 #define D2 3
@@ -18,6 +20,11 @@
 #define D6 7
 #define D7 8
 #define D8 9
+
+// End hardware setup
+
+// Port led description
+// the port is de decine
 
 #define Disarm 0
 #define Armed 1
@@ -43,7 +50,8 @@
 
 unsigned char allLed[] = { Disarm, Armed, Sys_A, Sys_B, \
                            TtoEallowT, TtoEallowB, OtoEallowB, OtoEallowT, E, T, O, \
-                           EtoTallowT, EtoTallowB, OtoTallowR, OtoTallowL, TtoOallowL, TtoOallowR, EtoOallowT, EtoOallowB };
+                           EtoTallowT, EtoTallowB, OtoTallowR, OtoTallowL, TtoOallowL, TtoOallowR, EtoOallowT, EtoOallowB
+                         };
 
 unsigned char allLedSize = sizeof(allLed);
 unsigned char allLedCount = 0;
@@ -106,9 +114,10 @@ void loop() {
   }
 }
 
+// function for power on/off named led
 void writeLed( unsigned char led, boolean state) {
   unsigned char port = led / 10;
-  led = led - ( port*10 );
+  led = led - ( port * 10 );
   ports[port][led] = state;
   for (unsigned char e = 0; e < LEDS; e++) {
     digitalWrite(e + D1, ports[port][e]);
@@ -116,6 +125,7 @@ void writeLed( unsigned char led, boolean state) {
   clock(port + CLK1);
 }
 
+// function for the two TRAFFIC and LOAD bars write a number to 0 (all off) to 8 (all on)
 void writeValue( unsigned char port, unsigned char value ) {
   for ( unsigned char i = 1 ; i <= 8; i++) {
     if ( value >= i ) {
