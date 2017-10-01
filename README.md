@@ -31,4 +31,4 @@ Board pinout
 
 ![Demo](https://github.com/bigjohnson/GitHubAssets/blob/master/WatchLed/IMG_20171001_172843.png?raw=true)
 
-[![Example](https://www.youtube.com/watch?v=7zcUyw-hMlM](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+[![Example](https://www.youtube.com/watch?v=7zcUyw-hMlM)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
