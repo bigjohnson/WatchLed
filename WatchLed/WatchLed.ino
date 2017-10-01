@@ -1,3 +1,9 @@
+/*
+  Watchguard Firebox 500/750/1000 led boards controlled by Arduino
+  see docs and pinout at
+  https://github.com/bigjohnson/WatchLed
+*/
+
 #define ON LOW
 #define OFF HIGH
 
