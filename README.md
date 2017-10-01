@@ -1,5 +1,5 @@
 # WatchLed
-Firebox 500/750/100 Watchguard led board with arduino
+Firebox 500/750/1000 Watchguard led board with arduino
 The led board use five 74LS374 Octal D-Type Flip-Flop Edge-Triggered Tri-State chips
 
 Chip order:
