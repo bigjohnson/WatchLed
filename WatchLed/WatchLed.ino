@@ -24,7 +24,7 @@
 // End hardware setup
 
 // Port led description
-// the port is de decine
+// the port is the decine
 
 #define Disarm 0
 #define Armed 1
